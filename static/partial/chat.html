@@ -1,0 +1,16 @@
+<div class="container">
+<div class="pre-scrollable" id="chat">
+    <div class="card" ng-repeat="message in history">
+      <div class="card-body">
+        <b>{{message.username}}</b>: {{message.text}}
+      </div>
+    </div>
+</div>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" ng-model="message" placeholder="Message..."
+    ng-keydown="$event.keyCode === 13 && sendMessage()">
+    <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" ng-click="sendMessage()">Send</button>
+    </div>
+</div>
+</div>
