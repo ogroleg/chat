@@ -103,7 +103,7 @@ class DB:
 
         if not result:
             return
-        print(result)
+        
         user_id, hashed_password = result
 
         is_valid_password = crypto.check_password(password, hashed_password)
